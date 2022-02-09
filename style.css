@@ -18,3 +18,8 @@
         h1{
             font-size: 20rem;
         }
+
+        #accessToken {
+            display: block;
+            overflow: auto;
+        }
