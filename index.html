@@ -8,10 +8,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
 <body>
-    <h1 class="text-center">LINE - LIFF APP PACC</h1>
-    <p id="os"><b>OS: </b></p>
-    <p id="language"><b>Language: </b></p>
-    <p id="version"><b>Version: </b></p>
+    <h1 class="text-center mt-4 mb-4">LINE - LIFF APP PACC</h1>
+    <div class="container">
+        <ul class="list-group">
+            <li class="list-group-item"><p id="os"><b>OS: </b></p></li>
+            <li class="list-group-item"><p id="language"><b>Language: </b></p></li>
+            <li class="list-group-item"><p id="version"><b>Version: </b></p></li>
+
+        </ul>
+
+    </div>
+    
 
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
     <script>
@@ -20,7 +27,7 @@
             document.getElementById("language").append(liff.getLanguage())
             document.getElementById("version").append(liff.getVersion())
         }
-        
+
         async function main(){
             await liff.init({liffID:"1656875952-ZLAnnpMO"})
             getEnvironment()
