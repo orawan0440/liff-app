@@ -56,15 +56,19 @@
 
         async function sendMsg(){
             await liff.sendMessages([
-                {
-                    "type": "text",
-                    "text": "Hello from LIFF App -TaamJaa"
-                },
+                // {
+                //     "type": "text",
+                //     "text": "Hello from LIFF App -TaamJaa"
+                // },
                 {
                     "type": "sticker",
                     "packageId": "1070",
                     "stickerId": "17841"
-                }
+                // },
+                // {"type": "image",
+                // "originalContentUrl": "https://example.com/original.jpg",
+                // "previewImageUrl": "https://example.com/preview.jpg"
+                // }
             ])
             alert("Message Sent!!")
         }
