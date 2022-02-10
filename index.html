@@ -31,10 +31,10 @@
             <li class="list-group-item"><p id="language"><b>Language: </b></p></li>
             <li class="list-group-item"><p id="lineVersion"><b>LineVersion: </b></p></li>
             <li class="list-group-item"><p id="type"><b>Type: </b></p></li>
-            <li class="list-group-item"><p id="viewType"><b>ViewType: </b></p></li>
-            <li class="list-group-item"><p id="groupId"><b>GroupID: </b></p></li>
-            <li class="list-group-item"><p id="roomId"><b>RoomID: </b></p></li>
-            <li class="list-group-item"><p id="utouId"><b>UtoUID:</b></p></li>
+            <li class="list-group-item" id="ex1"><p id="viewType"><b>ViewType: </b></p></li>
+            <li class="list-group-item" id="ex2"><p id="groupId"><b>GroupID: </b></p></li>
+            <li class="list-group-item" id="ex3"><p id="roomId"><b>RoomID: </b></p></li>
+            <li class="list-group-item" id="ex4"><p id="utouId"><b>UtoUID:</b></p></li>
             <li class="list-group-item"><p id="version"><b>SDKVersion: </b></p></li>
             <li class="list-group-item"><p id="isInClient"><b>isInClient: </b></p></li>
             <li class="list-group-item"><p id="accessToken"><b>AccessToken: </b></p></li>
@@ -47,6 +47,12 @@
     <script>
 
         function getContext(){
+            if(liff.getContext().type === 'external'){
+                document.getElementById("ex1").style.display='none'
+                document.getElementById("ex2").style.display='none'
+                document.getElementById("ex3").style.display='none'
+                document.getElementById("ex4").style.display='none'
+            }
             document.getElementById("type").append(liff.getContext().type)
             document.getElementById("viewType").append(liff.getContext().viewType)
             document.getElementById("groupId").append(liff.getContext().groupId)
