@@ -54,6 +54,16 @@
 
     <script>
 
+        function sendMsg(){
+            await liff.sendMessage([
+                {
+                    "type": "text",
+                    "text": "Hello"
+                }
+            ])
+            alert("Message Sent!!")
+        }
+
         function logout(){
             liff.logout();
             window.location.reload()
@@ -94,8 +104,7 @@
             document.getElementById("displayName").append(profile.displayName)
             document.getElementById("statusMessage").append(profile.statusMessage)
             document.getElementById("email").append(liff.getDecodedIDToken().email)
-            
-            
+                       
 
         }
 
