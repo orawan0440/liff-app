@@ -24,6 +24,10 @@
             overflow: auto;
         }
 
+        .word-wrap{
+            word-wrap: break-word;
+        }
+
         .list-group{
             font-size: .9rem;
         }
@@ -34,6 +38,6 @@
         }
 
         .list-group .active{
-            background-color: aquamarine;
+            background-color: rgba(13, 44, 145, 0.904);
             font-size: 1rem;
         }
