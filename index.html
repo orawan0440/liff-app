@@ -31,11 +31,11 @@
             <li class="list-group-item"><p id="language"><b>Language: </b></p></li>
             <li class="list-group-item"><p id="lineVersion"><b>LineVersion: </b></p></li>
             <li class="list-group-item"><p id="Type"><b>Type: </b></p></li>
-            <li class="list-group-item"><p id="viewType"><b>View Type: </b></p></li>
-            <li class="list-group-item"><p id="groupId"><b>Group ID: </b></p></li>
-            <li class="list-group-item"><p id="roomId"><b>Room ID: </b></p></li>
-            <li class="list-group-item"><p id="utoId"><b>UtoU ID:</b></p></li>
-            <li class="list-group-item"><p id="version"><b>Version: </b></p></li>
+            <li class="list-group-item"><p id="viewType"><b>ViewType: </b></p></li>
+            <li class="list-group-item"><p id="groupId"><b>GroupID: </b></p></li>
+            <li class="list-group-item"><p id="roomId"><b>RoomID: </b></p></li>
+            <li class="list-group-item"><p id="utoId"><b>UtoUID:</b></p></li>
+            <li class="list-group-item"><p id="version"><b>SDKVersion: </b></p></li>
             <li class="list-group-item"><p id="isInClient"><b>isInClient: </b></p></li>
             <li class="list-group-item"><p id="accessToken"><b>AccessToken: </b></p></li>
 
@@ -61,6 +61,7 @@
             document.getElementById("displayName").append(profile.displayName)
             document.getElementById("statusMessage").append(profile.statusMessage)
             document.getElementById("email").append(liff.getDecodedIDToken().email)
+            document.getElementById("lineVersion").append(liff.getLineVersion())
             
 
         }
