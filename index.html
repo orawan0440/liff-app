@@ -30,11 +30,11 @@
             <li class="list-group-item"><p id="os"><b>OS: </b></p></li>
             <li class="list-group-item"><p id="language"><b>Language: </b></p></li>
             <li class="list-group-item"><p id="lineVersion"><b>LineVersion: </b></p></li>
-            <li class="list-group-item"><p id="Type"><b>Type: </b></p></li>
+            <li class="list-group-item"><p id="type"><b>Type: </b></p></li>
             <li class="list-group-item"><p id="viewType"><b>ViewType: </b></p></li>
             <li class="list-group-item"><p id="groupId"><b>GroupID: </b></p></li>
             <li class="list-group-item"><p id="roomId"><b>RoomID: </b></p></li>
-            <li class="list-group-item"><p id="utoId"><b>UtoUID:</b></p></li>
+            <li class="list-group-item"><p id="utouId"><b>UtoUID:</b></p></li>
             <li class="list-group-item"><p id="version"><b>SDKVersion: </b></p></li>
             <li class="list-group-item"><p id="isInClient"><b>isInClient: </b></p></li>
             <li class="list-group-item"><p id="accessToken"><b>AccessToken: </b></p></li>
@@ -45,11 +45,12 @@
     
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
     <script>
+
         function getContext(){
             document.getElementById("type").append(liff.getContext().type)
             document.getElementById("viewType").append(liff.getContext().viewType)
             document.getElementById("groupId").append(liff.getContext().groupId)
-            document.getElementById("roomId").append(liff.getContext().groupId)
+            document.getElementById("roomId").append(liff.getContext().roomId)
             document.getElementById("utouId").append(liff.getContext().utouId)
         }
 
@@ -61,7 +62,7 @@
             document.getElementById("displayName").append(profile.displayName)
             document.getElementById("statusMessage").append(profile.statusMessage)
             document.getElementById("email").append(liff.getDecodedIDToken().email)
-            document.getElementById("lineVersion").append(liff.getLineVersion())
+            
             
 
         }
