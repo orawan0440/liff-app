@@ -22,6 +22,7 @@
             <li class="list-group-item"><p id="displayName"><b>Display Name: </b></p></li>
             <li class="list-group-item"><p id="statusMessage"><b>Status: </b></p></li>
             <li class="list-group-item"><p id="email"><b>E-Mail: </b></p></li>
+            <!-- <li class="list-group-item"><p id="qr"><b>QR Result: </b></p></li> -->
         </ul>
 
 
@@ -53,23 +54,30 @@
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
 
     <script>
+        async function scanCode() {
+            const result = await liff.scanCodeV2()
+            liff.openWindow({
+                url:result.value,
+                external:false
+            })
+        }
 
         async function sendMsg(){
             await liff.sendMessages([
-                // {
-                //     "type": "text",
-                //     "text": "Hello from LIFF App -TaamJaa"
-                // },
+                {
+                    "type": "text",
+                    "text": "Hello from LIFF App -TaamJaa"
+                },
                  {
                      "type": "sticker",
                      "packageId": "11537",
-                     "stickerId": "52002734"}
-                //  },
-                // {
-                //     "type": "image",
-                //     "originalContentUrl": "https://orawan0440.github.io/liff-app/image/cf12.JPG",
-                //     "previewImageUrl": "https://orawan0440.github.io/liff-app/image/cf122.jpg"
-                // },
+                     "stickerId": "52002734"
+                 },
+                {
+                    "type": "image",
+                    "originalContentUrl": "https://orawan0440.github.io/liff-app/image/cf122.jpg",
+                    "previewImageUrl": "https://orawan0440.github.io/liff-app/image/cf12.JPG"
+                }
                 
             ])
             alert("Message Sent!!");
